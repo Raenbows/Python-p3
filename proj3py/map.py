@@ -4,9 +4,9 @@ from random import randint
 
 #0 : empty
 #1 : player
-#2 : enemy
-#3 : trap
-#4 : backpack
+#2 : enemy (pyro)
+#3 : trap (backstab)
+#4 : backpack (intel)
 
 class Map:
     def __init__(self):

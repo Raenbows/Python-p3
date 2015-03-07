@@ -2,14 +2,15 @@
 
 class Character:
 
-    def __init__(self, hp, atk, dfc, name)
+    def __init__(self, hp, atk, dfc, name, wep):
         self.hp=hp
         self.atk=atk
         self.dfc=dfc
+        self.wep=wep
 
 class Player(Character):
-    def __init__(self, hp, atk, dfc, name)
-        Character.__init__(self, hp, atk, dfc, name)
+    def __init__(self, hp, atk, dfc, name, wep):
+        Character.__init__(self, hp, atk, dfc, name, wep)
 
     def help():
         pass
@@ -22,14 +23,14 @@ class Player(Character):
     def quit():
         pass
 
-class Hax(Player):
-    def __init__(self, hp, atk, dfc, name)
-        Player.__init__(self, 30, 8, 10, name)
+class Demoman(Player):
+    def __init__(self, name):
+        Player.__init__(self, 30, 8, 10, name, "Grenade Launcher")
 
-class Coder(Player):
-    def __init__(self, hp, atk, dfc, name)
-        Player.__init__(self, 30, 10, 8, name)
+class Soldier(Player):
+    def __init__(self, name):
+        Player.__init__(self, 30, 10, 8, name, "Rocket Launcher")
 
-class Robot(player):
-    def __init__(self, hp, atk, dfc, name)
-        Player.__init__(self, 15, 9, 7, "Robot")
+class Pyro(Player):
+    def __init__(self, name):
+        Player.__init__(self, 15, 9, 7, "Robot", "Flamlethrower")
