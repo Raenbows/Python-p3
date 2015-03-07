@@ -17,4 +17,4 @@ else:
     print("You gotta pick soldier or demo.")
     #come back to this
 
-print ("Alright, {}. You've spawned as a {}. Get out there and kick some RED butt!".format(type(player).__name__, classchoice))
+print ("Alright, {}. You've spawned as a {}. Get out there and kick some RED butt!".format(pname, player.__class__.__name__))
