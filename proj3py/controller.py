@@ -18,6 +18,6 @@ else:
     #come back to this
 
 print ("Alright, {}. You've spawned as a {}. Get out there and kick some RED butt!".format(pname, player.__class__.__name__))
-
+arena=Map()
 while(player.life is True):
     pass

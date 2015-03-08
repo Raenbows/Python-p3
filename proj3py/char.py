@@ -2,14 +2,14 @@
 
 class Character:
 
-    def __init__(self, hp, atk, dfc, name, ammo, loc, life, pos):
+    def __init__(self, hp, atk, dfc, name, ammo, life, x, y):
         self.hp=hp
         self.atk=atk
         self.dfc=dfc
         self.ammo=ammo
-        self.loc=loc
         self.life=life
-        self.pos=pos
+        self.x=x
+        self.y=y
 
     def calcHP(self, damage):
         self.hp=self.hp+damage
@@ -26,8 +26,8 @@ class Character:
                
 
 class Player(Character):
-    def __init__(self, hp, atk, dfc, name, ammo):
-        Character.__init__(self, hp, atk, dfc, name, ammo, life)
+    def __init__(self, hp, atk, dfc, name, ammo, life, x, y):
+        Character.__init__(self, hp, atk, dfc, name, ammo, life, x, y)
 
     def help():
         print("go [N, E, S, W]\n quit\n attack\n health\n hp\n")
@@ -45,12 +45,12 @@ class Player(Character):
 
 class Demoman(Player):
     def __init__(self, name):
-        Player.__init__(self, 30, 8, 10, name, "grenade", True)
+        Player.__init__(self, 30, 8, 10, name, "grenade", True, 2, 0)
 
 class Soldier(Player):
     def __init__(self, name):
-        Player.__init__(self, 30, 10, 8, name, "rocket", True)
+        Player.__init__(self, 30, 10, 8, name, "rocket", True, 2, 0)
 
 class Pyro(Player):
     def __init__(self, name):
-        Player.__init__(self, 15, 9, 7, "Robot", "flamlethrower", True)
+        Player.__init__(self, 15, 9, 7, "Robot", "flamlethrower", True, None, None)
