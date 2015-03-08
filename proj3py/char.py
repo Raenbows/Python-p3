@@ -35,8 +35,27 @@ class Player(Character):
     def health():
         print ("{} has {} health points.".format(self.name, self.hp))
         
-    def go(direction, player, board):
-        pass
+    def go(self, direction, player, board):
+        if direction=="n":
+            if (player.x)-1 <0:
+                print ("You cannot go any farther this way. Try another direction.")
+            else:
+                player.x=player.x-1
+        elif direction =="e":
+            if (player.y)+1>4:
+               print ("You cannot go any farther this way. Try another direction.")
+            else:
+                player.y=player.y-1
+        elif direction== "s":
+            if (player.x)+1 > 4:
+                print ("You cannot go any farther this way. Try another direction.")
+            else:
+                player.x=player.x+1
+        elif direction=="w":
+            if(player.y)-1 < 0:
+                print ("You cannot go any farther this way. Try another direction.")
+            else:
+                player.y=player.y-1
     def attack():
         
         pass

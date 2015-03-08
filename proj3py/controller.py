@@ -19,5 +19,14 @@ else:
 
 print ("Alright, {}. You've spawned as a {}. Get out there and kick some RED butt!".format(pname, player.__class__.__name__))
 arena=Map()
+
 while(player.life is True):
-    pass
+    command=raw_input()
+    commands=["go", "help", "attack", "health", "quit"]
+    command=command.split(" ")
+
+    if command[0] in commands:
+        if (command[0] == "go") and (command[1] != None):
+            player.go(command[1], player, arena)
+            
+        
