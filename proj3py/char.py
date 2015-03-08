@@ -1,4 +1,5 @@
 #char.py
+#Rachael Byrkit rmb11d
 
 class Character:
 
@@ -89,3 +90,7 @@ class Soldier(Player):
 class Pyro(Player):
     def __init__(self):
         Player.__init__(self, 15, 9, 7, "Pyro", "flamlethrower", False, True, None, None)
+
+    def attack(self, player):
+        print "Pyro attacks!"
+        return "you get hit for {} damage.".format(self.calc_damage(player))

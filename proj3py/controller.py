@@ -1,5 +1,5 @@
 #controller.py
-
+#Rachael Byrkit rmb11d
 #WELCOME TO TEAM FORTRESS 2!
 from char import Demoman
 from char import Soldier
@@ -30,6 +30,7 @@ while(player.life is True):
         
     if command[0] in commands:
         if (command[0] == "go") and (command[1] != None):
+            if player.combat==True
             player.go(command[1], player, arena)
         
         elif command[0]=="help":
@@ -38,9 +39,9 @@ while(player.life is True):
         elif command[0]=="health":
             player.health(player)
         elif command[0]=="attack":
-            #if player.combat=True:
-            pass
-                #*(****
+            if player.combat==True:
+                player.attack(enemy)
+                enemy.attack(player)
         elif command[0]=="quit":
             player.quit()
         
