@@ -6,6 +6,7 @@ class Character:
         self.hp=hp
         self.atk=atk
         self.dfc=dfc
+        self.name=name
         self.ammo=ammo
         self.life=life
         self.x=x
@@ -29,11 +30,11 @@ class Player(Character):
     def __init__(self, hp, atk, dfc, name, ammo, life, x, y):
         Character.__init__(self, hp, atk, dfc, name, ammo, life, x, y)
 
-    def help():
-        print("go [N, E, S, W]\n quit\n attack\n health\n hp\n")
+    def help(self):
+        print("go [N, E, S, W]\n quit\n attack\n health\n")
 
-    def health():
-        print ("{} has {} health points.".format(self.name, self.hp))
+    def health(self, player):
+        print ("{} has {} health points.".format(player.name, player.hp))
         
     def go(self, direction, player, board):
         if direction=="n":
