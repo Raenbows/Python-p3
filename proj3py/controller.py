@@ -24,6 +24,10 @@ while(player.life is True):
     commands=["go", "help", "attack", "health", "quit"]
     command=command.split(" ")
 
+    if arena.map[player.x][player.y] == 2:
+        enemy=Pyro()
+        player.combat=True
+        
     if command[0] in commands:
         if (command[0] == "go") and (command[1] != None):
             player.go(command[1], player, arena)
@@ -33,6 +37,15 @@ while(player.life is True):
         
         elif command[0]=="health":
             player.health(player)
+        elif command[0]=="attack":
+            #if player.combat=True:
+            pass
+                #*(****
+        elif command[0]=="quit":
+            player.quit()
+        
+
+            
         else:
             pass
     else:
